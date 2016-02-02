@@ -1,0 +1,36 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+body {
+	height: 100%;
+	width: 100%;
+}
+#middle {
+	text-align: center;
+	width: 534px;
+	margin: auto;
+
+}
+#profilePicture {
+	margin: auto;
+	width: 534px;
+}
+#intro {
+	margin-left: 32px;
+	margin-right: 32px;
+}
+.social {
+margin-left: 32px;
+margin-right: 32px;
+}
+.project {
+float: left;
+width: 200px;
+margin-top: 34px;
+margin-left: 32px;
+margin-right: 32px;
+}
+.template {
+	display: none;
+}

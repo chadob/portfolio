@@ -20,9 +20,9 @@ $(function() {
       newProject.removeClass('template');
       newProject.find('a').attr('href', this.projectLink);
       newProject.find('img').attr('src', this.projectPicture);
-      newProject.find('p.projectPar').text(this.projectDescription);
-      newProject.find('time.projectDate').text(this.projectDate);
-      $('#projectsDiv').prepend(newProject);
+      newProject.find('p.project-par').text(this.projectDescription);
+      newProject.find('time.project-date').text(this.projectDate);
+      $('#projects').prepend(newProject);
     };
 
     //calling the method on each newly constructed Project in order to add it to the dom
@@ -30,5 +30,13 @@ $(function() {
     aimProject.toHtml();
 
   })();
-
+  //code for using Nav bar
+  $('#nav').on('click', '.nav-item', function(e) {
+    e.preventDefault();
+    $('.swapped-body-content').hide();
+    var dataValue = $(this).attr('data-content');
+    $('#' + dataValue).fadeIn();
+  });
+  //make home the default page
+  $('#nav-list li:first-child').click();
 });

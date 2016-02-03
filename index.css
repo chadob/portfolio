@@ -5,14 +5,41 @@ html {
 body {
 	height: 100%;
 	width: 100%;
+	background: #D3C9CE
+}
+#nav {
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	border-right: solid 5px black;
+		background: #793F0D;
+}
+#nav-list {
+ list-style-type: none;
+}
+.nav-item {
+	margin-top: 30px;
+	border-bottom: solid 5px black;
+	border-bottom-left-radius: 5px;
+	background: #AC703D;
+}
+.activeNav {
+
+	background: #c38E63;
+}
+a {
+	text-decoration: none;
+	color: black;
 }
 #middle {
 	text-align: center;
 	width: 534px;
 	margin: auto;
-
 }
-#profilePicture {
+.swapped-body-content {
+	display: none;
+}
+#profile-picture {
 	margin: auto;
 	width: 534px;
 }
@@ -23,6 +50,7 @@ body {
 .social {
 margin-left: 32px;
 margin-right: 32px;
+border-bottom: 2px solid black;
 }
 .project {
 float: left;

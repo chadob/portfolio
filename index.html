@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="index.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/index.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
+		<div id="nav">
+			<ul id="nav-list">
+				<li class="nav-item" data-content="home"> <a href="#"> Home </a> </li>
+				<li class="nav-item" data-content="projects"> <a href="#"> Projects </a> </li>
+				<li class="nav-item" data-content="about"> <a href="#"> About </a> </li>
+			</ul>
+		</div>
 		<div id="middle">
-			<div id="profilePicture">
-				<img src="profilePicture.jpg">
+			<div id="home" class="swapped-body-content">
+				<h1> Welcome</h1>
+				<p> Use the navigation bar on the left to checkout my projects and learn a little about me. </p>
 			</div>
-			<p id="intro"> Hi, my name is Chad Oehlschlaeger-Browne. Welcome to my website. Please take a look at my projects below! </p>
-			<a class="social" href="https://github.com/chadob"> My GitHub Portfolio </a>
-			<a class="social" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
-			<div id="projectsDiv">
+			<div id="about" class="swapped-body-content">
+				<div id="profile-picture">
+					<img src="Assets/profilePicture.jpg">
+				</div>
+				<p id="intro"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
+				<a class="social" href="https://github.com/chadob"> My GitHub Portfolio </a>
+				<a class="social" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
+			</div>
+			<div id="projects" class="swapped-body-content">
 				<div class ="template project">
-					<a class="pictureLink" href="">
+					<a class="picture-link" href="">
 						<img src="">
 					</a>
-					<p class="projectPar"></p>
-					<p> <time class="projectDate"></time> </p>
+					<p class="project-par"></p>
+					<p> <time class="project-date"></time> </p>
 				</div>
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-		<script src="script.js"></script>
+		<script src="Scripts/script.js"></script>
 	</body>
 </html>

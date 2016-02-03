@@ -1,0 +1,64 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+body {
+	height: 100%;
+	width: 100%;
+	background: #D3C9CE
+}
+#nav {
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	border-right: solid 5px black;
+		background: #793F0D;
+}
+#nav-list {
+ list-style-type: none;
+}
+.nav-item {
+	margin-top: 30px;
+	border-bottom: solid 5px black;
+	border-bottom-left-radius: 5px;
+	background: #AC703D;
+}
+.activeNav {
+
+	background: #c38E63;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+#middle {
+	text-align: center;
+	width: 534px;
+	margin: auto;
+}
+.swapped-body-content {
+	display: none;
+}
+#profile-picture {
+	margin: auto;
+	width: 534px;
+}
+#intro {
+	margin-left: 32px;
+	margin-right: 32px;
+}
+.social {
+margin-left: 32px;
+margin-right: 32px;
+border-bottom: 2px solid black;
+}
+.project {
+float: left;
+width: 200px;
+margin-top: 34px;
+margin-left: 32px;
+margin-right: 32px;
+}
+.template {
+	display: none;
+}

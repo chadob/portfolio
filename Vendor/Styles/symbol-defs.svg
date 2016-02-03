@@ -1,0 +1,16 @@
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-home3" viewBox="0 0 1024 1024">
+<title>home3</title>
+<path class="path1" d="M1024 608l-192-192v-288h-128v160l-192-192-512 512v32h128v320h320v-192h128v192h320v-320h128z"></path>
+</symbol>
+<symbol id="icon-folder" viewBox="0 0 1024 1024">
+<title>folder</title>
+<path class="path1" d="M448 128l128 128h448v704h-1024v-832z"></path>
+</symbol>
+<symbol id="icon-user-tie" viewBox="0 0 1024 1024">
+<title>user-tie</title>
+<path class="path1" d="M320 192c0-106.039 85.961-192 192-192s192 85.961 192 192c0 106.039-85.961 192-192 192s-192-85.961-192-192zM768.078 448h-35.424l-199.104 404.244 74.45-372.244-96-96-96 96 74.45 372.244-199.102-404.244h-35.424c-127.924 0-127.924 85.986-127.924 192v320h768v-320c0-106.014 0-192-127.922-192z"></path>
+</symbol>
+</defs>
+</svg>

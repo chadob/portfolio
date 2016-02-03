@@ -3,8 +3,8 @@ $(function() {
   (function projectCreator() {
 
     //variables for each project
-    var taskProject = new Project('taskOrganizerScreenshot.jpg', 'Task Organizer','2016-01-08', 'https://taskorganizer.herokuapp.com/');
-    var aimProject = new Project('aimBlasterScreenshot.jpg', 'Aim Blaster','2016-01-08', 'https://aimblaster.herokuapp.com/');
+    var taskProject = new Project('Assets/taskOrganizerScreenshot.jpg', 'Task Organizer','2016-01-08', 'https://taskorganizer.herokuapp.com/');
+    var aimProject = new Project('Assets/aimBlasterScreenshot.jpg', 'Aim Blaster','2016-01-08', 'https://aimblaster.herokuapp.com/');
 
     //project Constructor function
     function Project (projectPicture, projectDescription, projectDate, projectLink) {

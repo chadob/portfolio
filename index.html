@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
+			<link href="Vendor/Styles/normalize.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/index.css" type="text/css" rel="stylesheet" />
+		<link href="Vendor/style.css" type="text/css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<div id="nav">
 			<ul id="nav-list">
-				<li class="nav-item" data-content="home"> <a href="#"> Home </a> </li>
-				<li class="nav-item" data-content="projects"> <a href="#"> Projects </a> </li>
-				<li class="nav-item" data-content="about"> <a href="#"> About </a> </li>
+				<li class="nav-item icon-home3" data-content="home"> <a href="#"> Home </a> </li>
+				<li class="nav-item icon-folder" data-content="projects"> <a href="#"> Projects </a> </li>
+				<li class="nav-item icon-user-tie" data-content="about"> <a href="#"> About </a> </li>
 			</ul>
 		</div>
 		<div id="middle">
 			<div id="home" class="swapped-body-content">
 				<h1> Welcome</h1>
-				<p> Use the navigation bar on the left to checkout my projects and learn a little about me. </p>
+				<p> Use the navigation bar to checkout my projects and learn a little about me. </p>
 			</div>
 			<div id="about" class="swapped-body-content">
-				<div id="profile-picture">
-					<img src="Assets/profilePicture.jpg">
+				<div id="profile-picture-holder">
+					<img id="profile-picture" src="Assets/profilePicture.jpg">
 				</div>
 				<p id="intro"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
 				<a class="social" href="https://github.com/chadob"> My GitHub Portfolio </a>
@@ -27,7 +30,7 @@
 			<div id="projects" class="swapped-body-content">
 				<div class ="template project">
 					<a class="picture-link" href="">
-						<img src="">
+						<img class="project-picture" src="">
 					</a>
 					<p class="project-par"></p>
 					<p> <time class="project-date"></time> </p>

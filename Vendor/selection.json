@@ -16,11 +16,12 @@
 			},
 			"attrs": [],
 			"properties": {
-				"order": 7,
+				"order": 1,
 				"prevSize": 16,
 				"ligatures": "home3, house3",
 				"name": "home3",
-				"id": 3
+				"id": 3,
+				"code": 59648
 			},
 			"setIdx": 0,
 			"setId": 0,
@@ -43,11 +44,12 @@
 			},
 			"attrs": [],
 			"properties": {
-				"order": 9,
+				"order": 2,
 				"prevSize": 16,
 				"ligatures": "folder, directory",
 				"name": "folder",
-				"id": 48
+				"id": 48,
+				"code": 59649
 			},
 			"setIdx": 0,
 			"setId": 0,
@@ -75,11 +77,12 @@
 			},
 			"attrs": [],
 			"properties": {
-				"order": 12,
+				"order": 3,
 				"prevSize": 16,
 				"ligatures": "user-tie, user5",
 				"name": "user-tie",
-				"id": 119
+				"id": 119,
+				"code": 59650
 			},
 			"setIdx": 0,
 			"setId": 0,
@@ -87,6 +90,9 @@
 		}
 	],
 	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
 	"preferences": {
 		"showGlyphs": true,
 		"showQuickUse": true,
@@ -102,18 +108,26 @@
 				"baseline": 6.25,
 				"whitespace": 50
 			},
-			"embed": false
+			"embed": false,
+			"autoHost": true
 		},
 		"imagePref": {
 			"prefix": "icon-",
-			"png": true,
+			"png": false,
 			"useClassSelector": true,
 			"color": 0,
 			"bgColor": 16777215,
-			"classSelector": ".icon"
+			"classSelector": ".icon",
+			"height": 32,
+			"columns": 16,
+			"margin": 16,
+			"sprite": true
 		},
 		"historySize": 100,
 		"showCodes": true,
-		"gridSize": 16
+		"gridSize": 16,
+		"quickUsageToken": {
+			"UntitledProject": "ZWYwNDIxMGY3M2Y2MjIwZGZiYjAxMjZlMDA4ODQwNTYjMSMxNDU0NTM4Mjc5IyMj"
+		}
 	}
 }

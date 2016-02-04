@@ -114,4 +114,28 @@ margin-right: 32px;
 		border-bottom-left-radius: 5px;
 		background: #AC703D;
 	}
+	#middle {
+		text-align: center;
+		width: 90%;
+		max-width: 534px;
+		min-height: 100%;
+		margin-left: 20%;
+	}
+	/* still working on this piece of code. I want the middle div to be centered between right edge of screen and the edge of the nav bar
+	/*#middle:before {
+		content: "";
+		display: inline-block;
+		width: 20%;
+		min-width: 85px;
+	}*/
+	#nav:hover {
+		position: fixed;
+		width: 20%;
+		min-width: 85px;
+		max-width: 200px;
+		height: 100%;
+		border-right: solid 5px black;
+			background: #793F0D;
+			z-index: 1;
+	}
 }

@@ -16,18 +16,21 @@ $(function() {
 
     //function to create a new project using an existing template and filling in spots with the newly constructed project above
     Project.prototype.toHtml = function(thisFunction) {
-      var newProject = $('.template').clone();
-      newProject.removeClass('template');
-      newProject.find('a').attr('href', this.projectLink);
-      newProject.find('img').attr('src', this.projectPicture);
-      newProject.find('p.project-par').text(this.projectDescription);
-      newProject.find('time.project-date').text(this.projectDate);
-      $('#projects').prepend(newProject);
+      var template = Handlebars.compile($('#project-template').text());
+      console.log('yes');
+      return template(this);
+
+      // var newProject = $('.template').clone();
+      // newProject.removeClass('template');
+      // newProject.find('a').attr('href', this.projectLink);
+      // newProject.find('img').attr('src', this.projectPicture);
+      // newProject.find('p.project-par').text(this.projectDescription);
+      // newProject.find('time.project-date').text(this.projectDate);
     };
 
     //calling the method on each newly constructed Project in order to add it to the dom
-    taskProject.toHtml();
-    aimProject.toHtml();
+    $('#projects').prepend(taskProject.toHtml());
+    $('#projects').prepend(aimProject.toHtml());
 
   })();
   //code for using Nav bar

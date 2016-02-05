@@ -1,0 +1,82 @@
+html {
+	height: 100%;
+	width: 100%;
+	min-width: 320px;
+}
+body {
+	height: 100%;
+	width: 100%;
+	background: #D3C9CE
+}
+/*code for content portion of website */
+#right-side {
+	width: 100%;
+}
+#middle {
+	text-align: center;
+	width: 90%;
+	max-width: 534px;
+	min-height: 100%;
+	margin: auto;
+}
+.swapped-body-content {
+	display: none;
+	min-width: 90%;
+	min-height: 250px;
+}
+#profile-picture-holder {
+	margin: auto;
+	width: 90%;
+	max-width: 534px;
+}
+#profile-picture {
+	margin: auto;
+	width: 90%;
+	max-width: 534px;
+}
+#intro {
+	margin-left: 32px;
+	margin-right: 32px;
+}
+.social {
+margin-top: 32px;
+margin-left: 32px;
+margin-right: 32px;
+border-bottom: 2px solid black;
+display: block;
+}
+.project {
+float: left;
+width: 75%;
+margin-top: 34px;
+margin-left: 32px;
+margin-right: 32px;
+}
+.picture-link {
+	width: 100%;
+}
+.project-picture {
+	width: 100%;
+	max-width: 400px;
+	min-width: 200px;
+}
+.template {
+	display: none;
+}
+
+@media only screen and (min-width: 641px) {
+	#right-side {
+		width: 80%;
+		margin-left: 20%;
+	}
+	#middle {
+		text-align: center;
+		justify-content: center;
+		display: flex;
+		width: 80%;
+		max-width: 534px;
+		min-height: 100%;
+		left: 20%;
+		margin: auto;
+	}
+}

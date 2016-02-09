@@ -2,17 +2,39 @@ $(function() {
 
   (function projectCreator() {
 
-    //variables for each project
-    var taskProject = new Project('Assets/taskOrganizerScreenshot.jpg', 'Task Organizer','2016-01-08', 'https://taskorganizer.herokuapp.com/');
-    var aimProject = new Project('Assets/aimBlasterScreenshot.jpg', 'Aim Blaster','2016-01-08', 'https://aimblaster.herokuapp.com/');
-
     //project Constructor function
-    function Project (projectPicture, projectDescription, projectDate, projectLink) {
-      this.projectPicture = projectPicture;
-      this.projectDescription = projectDescription;
-      this.projectDate = projectDate;
-      this.projectLink = projectLink;
+    function Project (project) {
+      this.projectPicture = project.projectPicture;
+      this.projectTitle = project.projectTitle;
+      this.projectDate = project.projectDate;
+      this.projectLink = project.projectLink;
     }
+    Project.projectList = [];
+    //code to create a method to check localStorage for json object and prepend it to the dom
+    Project.fetchAll = function() {
+      var dataList;
+      if (localStorage.storageProjects) {
+        dataList = JSON.parse(localStorage.storageProjects);
+        dataList.forEach(function(project) {
+          Project.projectList.push(new Project(project));
+        });
+        console.log(Project.projectList);
+        Project.projectList.forEach(function(project) {
+          $('#projects').prepend(project.toHtml());
+        });
+      } else {
+        $.getJSON('Data/projectData.json', function(data) {
+          localStorage.setItem('storageProjects', JSON.stringify(data));
+          dataList = JSON.parse(localStorage.storageProjects);
+          dataList.forEach(function(project) {
+            Project.projectList.push(new Project(project));
+          });
+          Project.projectList.forEach(function(project) {
+            $('#projects').prepend(project.toHtml());
+          });
+        });
+      }
+    };
 
     //function to create a new project using an existing template and filling in spots with the newly constructed project above
     Project.prototype.toHtml = function(thisFunction) {
@@ -20,12 +42,9 @@ $(function() {
       console.log('yes');
       return template(this);
     };
-
-    //calling the method on each newly constructed Project in order to add it to the dom
-    $('#projects').prepend(taskProject.toHtml());
-    $('#projects').prepend(aimProject.toHtml());
-
+    Project.fetchAll();
   })();
+
   //code for using Nav bar
   $('#nav').on('click', '.nav-item', function(e) {
     e.preventDefault();

@@ -1,0 +1,14 @@
+[
+  {
+    "projectTitle" : "taskOrganizer",
+    "projectPicture": "Assets/taskOrganizerScreenshot.jpg",
+    "projectDate": "2016-01-08",
+    "projectLink": "https://taskorganizer.herokuapp.com/"
+  },
+  {
+    "projectTitle": "aimProject",
+    "projectPicture": "Assets/aimBlasterScreenshot.jpg",
+    "projectDate": "2016-01-08",
+    "projectLink": "https://aimblaster.herokuapp.com/"
+  }
+]

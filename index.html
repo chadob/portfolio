@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-			<link href="Vendor/Styles/normalize.css" type="text/css" rel="stylesheet" />
-		<link href="Styles/index.css" type="text/css" rel="stylesheet" />
+		<link href="Vendor/Styles/normalize.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/base.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/layout.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/module.css" type="text/css" rel="stylesheet" />
 		<link href="Vendor/style.css" type="text/css" rel="stylesheet" />
+		<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script id="project-template" type="text/x-handlebars-template">
+			<div class ="project">
+				<a class="picture-link" href="{{projectLink}}">
+					<img class="project-picture" src="{{projectPicture}}">
+				</a>
+				<p class="project-par">{{projectDescription}}</p>
+				<p> <time class="project-date">{{projectDate}}</time> </p>
+			</div>
+		</script>
 	</head>
 	<body>
 		<div id="nav">
@@ -14,30 +28,26 @@
 				<li class="nav-item icon-user-tie" data-content="about"> <a href="#"> About </a> </li>
 			</ul>
 		</div>
-		<div id="middle">
-			<div id="home" class="swapped-body-content">
-				<h1> Welcome</h1>
-				<p> Use the navigation bar to checkout my projects and learn a little about me. </p>
-			</div>
-			<div id="about" class="swapped-body-content">
-				<div id="profile-picture-holder">
-					<img id="profile-picture" src="Assets/profilePicture.jpg">
+		<div id="right-side">
+			<div id="middle">
+				<div id="home" class="swapped-body-content">
+					<h1> Welcome</h1>
+					<p> Use the navigation bar to checkout my projects and learn a little about me. </p>
 				</div>
-				<p id="intro"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
-				<a class="social" href="https://github.com/chadob"> My GitHub Portfolio </a>
-				<a class="social" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
-			</div>
-			<div id="projects" class="swapped-body-content">
-				<div class ="template project">
-					<a class="picture-link" href="">
-						<img class="project-picture" src="">
-					</a>
-					<p class="project-par"></p>
-					<p> <time class="project-date"></time> </p>
+				<div id="about" class="swapped-body-content">
+					<div id="profile-picture-holder">
+						<img id="profile-picture" src="Assets/profilePicture.jpg">
+					</div>
+					<p id="intro"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
+					<a class="social" href="https://github.com/chadob"> My GitHub Portfolio </a>
+					<a class="social" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
+				</div>
+				<div id="projects" class="swapped-body-content">
 				</div>
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 		<script src="Scripts/script.js"></script>
 	</body>
 </html>

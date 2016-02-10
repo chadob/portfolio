@@ -14,7 +14,7 @@
     if (localStorage.storageProjects) {
       dataList = JSON.parse(localStorage.storageProjects);
       Project.projectList = dataList.map(function(project) {
-        $('#projects').prepend(new Project(project).toHtml());
+        $('.projects').prepend(new Project(project).toHtml());
       });
       console.log(Project.projectList);
     } else {
@@ -22,7 +22,7 @@
         localStorage.setItem('storageProjects', JSON.stringify(data));
         dataList = JSON.parse(localStorage.storageProjects);
         Project.projectList = dataList.map(function(project) {
-          $('#projects').prepend(new Project(project).toHtml());
+          $('.projects').prepend(new Project(project).toHtml());
         });
       });
     }
@@ -44,14 +44,14 @@
   console.log(str);
 
   //code for using Nav bar
-  $('#nav').on('click', '.nav-item', function(e) {
+  $('.nav').on('click', '.nav-item', function(e) {
     e.preventDefault();
     $('.swapped-body-content').hide();
     var dataValue = $(this).attr('data-content');
-    $('#' + dataValue).fadeIn();
+    $('.' + dataValue).fadeIn();
   });
   //make home the default page
-  $('#nav-list li:first-child').click();
+  $('.nav-list li:first-child').click();
 
   module.Project = Project;
 })(window);

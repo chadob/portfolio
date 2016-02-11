@@ -6,11 +6,13 @@
 		<link href="Styles/base.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/layout.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/module.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/eyeball.css" type="text/css" rel="stylesheet" />
 		<link href="Vendor/style.css" type="text/css" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<!--handlebars template for adding projects-->
 		<script id="project-template" type="text/x-handlebars-template">
 			<div class ="project">
 				<a class="picture-link" href="{{projectLink}}">
@@ -21,7 +23,9 @@
 			</div>
 		</script>
 	</head>
+
 	<body>
+		<!--nav Bar-->
 		<div class="nav">
 			<a class = "pull-up icon-menu" href="#"> </a>
 			<ul class="nav-list">
@@ -30,6 +34,8 @@
 				<li class="nav-item icon-user-tie" data-content="about"> <a href="#"> About </a> </li>
 			</ul>
 		</div>
+
+		<!--Content Div-->
 		<div class="right-side">
 			<div class="middle">
 				<div class="home swapped-body-content">
@@ -46,10 +52,26 @@
 				</div>
 				<div class="projects swapped-body-content">
 				</div>
+
+				<!--EYEBALL-->
+				<div id="eyeLid">
+					<div id="eyeball">
+						<div id="iris">
+							<div id="irisBG">
+							</div>
+							<div id="pupil">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<!--SCRIPTS-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="Scripts/script.js"></script>
+		<script src="Scripts/eyeball.js"></script>
 	</body>
 </html>

@@ -5,7 +5,7 @@ $(function() {
 	//code for eye following cursor
 	$(document).mousemove(function(e) {
     window.x = e.pageX;
-    window.y = e.pageY;
+  	window.y = e.pageY;
     mouseXPosition = Math.round(window.x / $('body').css('width').replace("px", "") * 100);
     mouseYPosition = Math.round(window.y / $('body').css('height').replace("px", "") * 100);
 		xRotate = mouseXPosition - 50;

@@ -5,8 +5,8 @@
 		<link href="Vendor/Styles/normalize.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/base.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/layout.css" type="text/css" rel="stylesheet" />
-		<link href="Styles/module.css" type="text/css" rel="stylesheet" />
-		<link href="Styles/eyeball.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/Modules/nav.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/Modules/eyeball.css" type="text/css" rel="stylesheet" />
 		<link href="Vendor/style.css" type="text/css" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
@@ -14,13 +14,13 @@
 
 		<!--handlebars template for adding projects-->
 		<script id="project-template" type="text/x-handlebars-template">
-			<div class ="project">
+			<figure class ="project">
 				<a class="picture-link" href="{{projectLink}}">
-					<img class="project-picture" src="{{projectPicture}}">
+					<img class="project-picture" src="{{projectPicture}}" title="Project Screenshot">
 				</a>
 				<p class="project-par">{{projectTitle}}</p>
 				<p> <time class="project-date">{{projectDate}}</time> </p>
-			</div>
+			</figure>
 		</script>
 	</head>
 
@@ -44,11 +44,11 @@
 				</div>
 				<div class="about swapped-body-content">
 					<div class="profile-picture-holder">
-						<img class="profile-picture" src="Assets/profilePicture.jpg">
+						<img class="profile-picture" src="Assets/profilePicture.jpg" title="Picture of Chad">
 					</div>
-					<p class="intro"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
-					<a class="social" href="https://github.com/chadob"> My GitHub Portfolio </a>
-					<a class="social" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
+					<p class="intro-paragraph"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
+					<a class="social-link" href="https://github.com/chadob"> My GitHub Portfolio </a>
+					<a class="social-link" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
 				</div>
 				<div class="projects swapped-body-content">
 				</div>

@@ -2,10 +2,9 @@
 
     //project Constructor function
   function Project (project) {
-    this.projectPicture = project.projectPicture;
-    this.projectTitle = project.projectTitle;
-    this.projectDate = project.projectDate;
-    this.projectLink = project.projectLink;
+    Object.keys(project).forEach(function(property, index, keys) {
+      this[property] = project[property];
+    },this);
   }
   Project.projectList = [];
   //code to create a method to check localStorage for json object and prepend it to the dom

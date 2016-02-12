@@ -8,6 +8,7 @@ body {
 	width: 100%;
 	background: #D3C9CE
 }
+
 /*code for content portion of website */
 .right-side {
 	width: 100%;
@@ -24,6 +25,7 @@ body {
 	min-width: 90%;
 	min-height: 250px;
 }
+/*About section */
 .profile-picture-holder {
 	margin: auto;
 	width: 90%;
@@ -34,17 +36,19 @@ body {
 	width: 90%;
 	max-width: 534px;
 }
-.intro {
+.intro-paragraph {
 	margin-left: 32px;
 	margin-right: 32px;
 }
-.social {
+.social-link {
 margin-top: 32px;
 margin-left: 32px;
 margin-right: 32px;
 border-bottom: 2px solid black;
 display: block;
 }
+
+/*Projects Section */
 .project {
 float: left;
 width: 75%;
@@ -64,6 +68,7 @@ margin-right: 32px;
 	display: none;
 }
 
+/*Displayed on desktop */
 @media only screen and (min-width: 641px) {
 	.right-side {
 		width: 80%;

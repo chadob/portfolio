@@ -1,0 +1,74 @@
+.nav {
+	font-family: 'Fjalla One', sans-serif;
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	bottom: -20px;
+	border-top: solid 5px black;
+		background: #793F0D;
+		z-index: 1;
+}
+.nav:hover {
+	bottom: 0px;
+	height: 200px;
+}
+.nav-list {
+ list-style-type: none;
+ padding: 0px;
+}
+.nav-item {
+	padding-left: 10px;
+	width: 100%;
+	min-width: 85px;
+	margin-top: 30px;
+	border-bottom: solid 5px black;
+	border-bottom-left-radius: 5px;
+	background: #AC703D;
+}
+.activeNav {
+	background: #c38E63;
+}
+.pull-up {
+	position: absolute;
+	left: calc(50% - 7px);
+	font-size: 30px;
+}
+@media only screen and (min-width: 641px) {
+	.nav {
+		position: fixed;
+		width: 20%;
+		min-width: 85px;
+		max-width: 200px;
+		height: 100%;
+		border-right: solid black 10px;
+		background: #793F0D;
+		z-index: 1;
+		bottom: 0px;
+	}
+	.nav-list {
+	 list-style-type: none;
+	 padding: 0px;
+	}
+	.nav:hover {
+		position: fixed;
+		width: 20%;
+		min-width: 85px;
+		max-width: 200px;
+		height: 100%;
+		border-right: solid 10px black;
+			background: #793F0D;
+			z-index: 1;
+	}
+	.nav-item {
+		width: calc(100% - 10px);
+		min-width: 85px;
+		max-width: 200px;
+		margin-top: 30px;
+		border-bottom: solid 5px black;
+		border-bottom-left-radius: 5px;
+		background: #AC703D;
+	}
+	.pull-up {
+		display: none;
+	}
+}

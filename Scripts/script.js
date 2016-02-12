@@ -1,38 +1,56 @@
-$(function() {
-
-  (function projectCreator() {
-
-    //variables for each project
-    var taskProject = new Project('Assets/taskOrganizerScreenshot.jpg', 'Task Organizer','2016-01-08', 'https://taskorganizer.herokuapp.com/');
-    var aimProject = new Project('Assets/aimBlasterScreenshot.jpg', 'Aim Blaster','2016-01-08', 'https://aimblaster.herokuapp.com/');
+(function(module) {
 
     //project Constructor function
-    function Project (projectPicture, projectDescription, projectDate, projectLink) {
-      this.projectPicture = projectPicture;
-      this.projectDescription = projectDescription;
-      this.projectDate = projectDate;
-      this.projectLink = projectLink;
+  function Project (project) {
+    Object.keys(project).forEach(function(property, index, keys) {
+      this[property] = project[property];
+    },this);
+  }
+  Project.projectList = [];
+  //code to create a method to check localStorage for json object and prepend it to the dom
+  Project.fetchAll = function() {
+    var dataList;
+    if (localStorage.storageProjects) {
+      dataList = JSON.parse(localStorage.storageProjects);
+      Project.projectList = dataList.map(function(project) {
+        $('.projects').prepend(new Project(project).toHtml());
+      });
+      console.log(Project.projectList);
+    } else {
+      $.getJSON('Data/projectData.json', function(data) {
+        localStorage.setItem('storageProjects', JSON.stringify(data));
+        dataList = JSON.parse(localStorage.storageProjects);
+        Project.projectList = dataList.map(function(project) {
+          $('.projects').prepend(new Project(project).toHtml());
+        });
+      });
     }
+  };
 
-    //function to create a new project using an existing template and filling in spots with the newly constructed project above
-    Project.prototype.toHtml = function(thisFunction) {
-      var template = Handlebars.compile($('#project-template').text());
-      console.log('yes');
-      return template(this);
-    };
+  //function to create a new project using an existing template and filling in spots with the newly constructed project above
+  Project.prototype.toHtml = function(thisFunction) {
+    var template = Handlebars.compile($('#project-template').text());
+    return template(this);
+  };
+  Project.fetchAll();
 
-    //calling the method on each newly constructed Project in order to add it to the dom
-    $('#projects').prepend(taskProject.toHtml());
-    $('#projects').prepend(aimProject.toHtml());
+  //useless code to include reduce because I can't think of any reason why I would use it in this site
+  var arr = ['Hi, ', 'my ', 'name ', 'is ', 'Chad.'];
+  var str = '';
+  str = arr.reduce(function(a, b) {
+    return str + a + b;
+  });
+  console.log(str);
 
-  })();
   //code for using Nav bar
-  $('#nav').on('click', '.nav-item', function(e) {
+  $('.nav').on('click', '.nav-item', function(e) {
     e.preventDefault();
     $('.swapped-body-content').hide();
     var dataValue = $(this).attr('data-content');
-    $('#' + dataValue).fadeIn();
+    $('.' + dataValue).fadeIn();
   });
   //make home the default page
-  $('#nav-list li:first-child').click();
-});
+  $('.nav-list li:first-child').click();
+
+  module.Project = Project;
+})(window);

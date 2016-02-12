@@ -1,4 +1,4 @@
-#nav {
+.nav {
 	font-family: 'Fjalla One', sans-serif;
 	position: fixed;
 	height: 50px;
@@ -8,11 +8,11 @@
 		background: #793F0D;
 		z-index: 1;
 }
-#nav:hover {
+.nav:hover {
 	bottom: 0px;
 	height: 200px;
 }
-#nav-list {
+.nav-list {
  list-style-type: none;
  padding: 0px;
 }
@@ -26,11 +26,15 @@
 	background: #AC703D;
 }
 .activeNav {
-
 	background: #c38E63;
 }
+.pull-up {
+	position: absolute;
+	left: calc(50% - 7px);
+	font-size: 30px;
+}
 @media only screen and (min-width: 641px) {
-	#nav {
+	.nav {
 		position: fixed;
 		width: 20%;
 		min-width: 85px;
@@ -41,11 +45,11 @@
 		z-index: 1;
 		bottom: 0px;
 	}
-	#nav-list {
+	.nav-list {
 	 list-style-type: none;
 	 padding: 0px;
 	}
-	#nav:hover {
+	.nav:hover {
 		position: fixed;
 		width: 20%;
 		min-width: 85px;
@@ -63,5 +67,8 @@
 		border-bottom: solid 5px black;
 		border-bottom-left-radius: 5px;
 		background: #AC703D;
+	}
+	.pull-up {
+		display: none;
 	}
 }

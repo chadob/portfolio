@@ -1,0 +1,94 @@
+/*controls animation and layout of eyeball*/
+@keyframes blink {
+    0%   {height: 100px;}
+    3.125%  {height: 50px;}
+    6.25%  {height: 0px;}
+    9.375%  {height: 50px;}
+    12.5% {height: 100px;}
+		100% {height: 100px;}
+}
+
+#eyeball {
+	height: 120px;
+	width: 120px;
+	background-color: white;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto auto;
+	position: absolute;
+	border-radius: 150px;
+	overflow: hidden;
+}
+#ball {
+	height: 80px;
+	width: 80px;
+	background-color: white;
+	left: 0px;
+	top: 100px;
+	bottom: 0px;
+	position: absolute;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#iris {
+	height: 80px;
+	width: 80px;
+	background-color: #793F0D;
+		left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	position: relative;
+	border-radius: 60px;
+}
+/* code that I may implement for adding texture to the iris */
+/*#iris::before {
+	content: "";
+	height: 80px;
+	width: 80px;
+	background-image: url("pics/finalEye.jpg");
+	background-position: center;
+
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	position: absolute;
+	border-radius: 60px;
+	opacity: .5;
+	transform: rotate(30deg);
+}*/
+#pupil {
+	height: 40px;
+	width: 40px;
+	background-color: black;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto auto;
+	position: absolute;
+	border-radius: 30px;
+	z-index: 10;
+	opacity: .5px;
+}
+
+#eyeLid {
+	height: 90px;
+	width: 140px;
+	border: 5px solid black;
+	background-color: black;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto auto;
+	position: absolute;
+	border-radius: 50% 50%;
+	z-index: 11;
+	overflow: hidden;
+	animation: blink 4.0s linear 0s infinite;
+}

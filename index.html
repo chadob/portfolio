@@ -1,53 +1,77 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title> Chad </title>
 		<link href="Vendor/Styles/normalize.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/base.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/layout.css" type="text/css" rel="stylesheet" />
-		<link href="Styles/module.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/Modules/nav.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/Modules/eyeball.css" type="text/css" rel="stylesheet" />
 		<link href="Vendor/style.css" type="text/css" rel="stylesheet" />
 		<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<!--handlebars template for adding projects-->
 		<script id="project-template" type="text/x-handlebars-template">
-			<div class ="project">
+			<figure class ="project">
 				<a class="picture-link" href="{{projectLink}}">
-					<img class="project-picture" src="{{projectPicture}}">
+					<img class="project-picture" src="{{projectPicture}}" title="Project Screenshot">
 				</a>
-				<p class="project-par">{{projectDescription}}</p>
+				<p class="project-par">{{projectTitle}}</p>
 				<p> <time class="project-date">{{projectDate}}</time> </p>
-			</div>
+			</figure>
 		</script>
 	</head>
+
 	<body>
-		<div id="nav">
-			<ul id="nav-list">
+		<!--nav Bar-->
+		<div class="nav">
+			<a class = "pull-up icon-menu" href="#"> </a>
+			<ul class="nav-list">
 				<li class="nav-item icon-home3" data-content="home"> <a href="#"> Home </a> </li>
 				<li class="nav-item icon-folder" data-content="projects"> <a href="#"> Projects </a> </li>
 				<li class="nav-item icon-user-tie" data-content="about"> <a href="#"> About </a> </li>
 			</ul>
 		</div>
-		<div id="right-side">
-			<div id="middle">
-				<div id="home" class="swapped-body-content">
+
+		<!--Content Div-->
+		<div class="right-side">
+			<div class="middle">
+				<div class="home swapped-body-content">
 					<h1> Welcome</h1>
 					<p> Use the navigation bar to checkout my projects and learn a little about me. </p>
 				</div>
-				<div id="about" class="swapped-body-content">
-					<div id="profile-picture-holder">
-						<img id="profile-picture" src="Assets/profilePicture.jpg">
+				<div class="about swapped-body-content">
+					<div class="profile-picture-holder">
+						<img class="profile-picture" src="Assets/profilePicture.jpg" title="Picture of Chad">
 					</div>
-					<p id="intro"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
-					<a class="social" href="https://github.com/chadob"> My GitHub Portfolio </a>
-					<a class="social" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
+					<p class="intro-paragraph"> Hi, my name is Chad Oehlschlaeger-Browne. </p>
+					<a class="social-link" href="https://github.com/chadob"> My GitHub Portfolio </a>
+					<a class="social-link" href="https://www.linkedin.com/nhome/?trk="> My Linked-In </a>
 				</div>
-				<div id="projects" class="swapped-body-content">
+				<div class="projects swapped-body-content">
+				</div>
+
+				<!--EYEBALL-->
+				<div id="eyeLid">
+					<div id="eyeball">
+						<div id="iris">
+							<div id="irisBG">
+							</div>
+							<div id="pupil">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<!--SCRIPTS-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 		<script src="Scripts/script.js"></script>
+		<script src="Scripts/eyeball.js"></script>
 	</body>
 </html>

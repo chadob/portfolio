@@ -19,32 +19,32 @@ $(function() {
 			heightWidthSetter = mouseYPosition;
 		}
 		if (heightWidthSetter < 50) {
-			$('#iris').css('height', (.66 * irisSize) + (.34/50 * heightWidthSetter * irisSize) + "px");
-			$('#pupil').css('height', (.66 * pupilSize) + (.34/50 * heightWidthSetter * pupilSize)  + "px");
+			$('.iris').css('height', (.66 * irisSize) + (.34/50 * heightWidthSetter * irisSize) + "px");
+			$('.pupil').css('height', (.66 * pupilSize) + (.34/50 * heightWidthSetter * pupilSize)  + "px");
 		} else {
-			$('#iris').css('height', (1.34 * irisSize - (.34/50 * heightWidthSetter * irisSize)) + "px");
-			$('#pupil').css('height', (1.34 * pupilSize - (.34/50 * heightWidthSetter * pupilSize)) + "px");
+			$('.iris').css('height', (1.34 * irisSize - (.34/50 * heightWidthSetter * irisSize)) + "px");
+			$('.pupil').css('height', (1.34 * pupilSize - (.34/50 * heightWidthSetter * pupilSize)) + "px");
 		}
 		// change shape for the iris and pupil
-		$('#iris').css('border-radius', '75%');
-		$('#pupil').css('border-radius', '75%');
+		$('.iris').css('border-radius', '75%');
+		$('.pupil').css('border-radius', '75%');
 
 		//code for rotation
 		if (mouseYPosition <= 50) {
 			if (mouseXPosition < 50) {
-				$('#iris').css({'transform' : 'rotate(' + (270 + angle) + 'deg)'});
+				$('.iris').css({'transform' : 'rotate(' + (270 + angle) + 'deg)'});
 			}	else {
-				$('#iris').css({'transform' : 'rotate(' + (90 + angle) + 'deg)'});
+				$('.iris').css({'transform' : 'rotate(' + (90 + angle) + 'deg)'});
 			}
 		} else {
 			if (mouseXPosition < 50) {
-				$('#iris').css({'transform' : 'rotate(' + (270 + angle) + 'deg)'});
+				$('.iris').css({'transform' : 'rotate(' + (270 + angle) + 'deg)'});
 			}	else {
-				$('#iris').css({'transform' : 'rotate(' + (90 + angle) + 'deg)'});
+				$('.iris').css({'transform' : 'rotate(' + (90 + angle) + 'deg)'});
 			}
 		}
 		//code for cursor position and eyeball position
-	  $('#iris').css('left', 'calc(' + mouseXPosition + '% + ' + (-14 - 53/100 * mouseXPosition) + 'px)');
-		$('#iris').css('top', 'calc((' + mouseYPosition + '%) - (' + mouseYPosition / 100 * $('#iris').css('height').replace('px', "") + 'px)');
+	  $('.iris').css('left', 'calc(' + mouseXPosition + '% + ' + (-14 - 53/100 * mouseXPosition) + 'px)');
+		$('.iris').css('top', 'calc((' + mouseYPosition + '%) - (' + mouseYPosition / 100 * $('.iris').css('height').replace('px', "") + 'px)');
 	});
 });

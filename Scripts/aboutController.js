@@ -1,11 +1,11 @@
 (function(module) {
-  var homeController = {};
+  var aboutController = {};
 
   // Done: Define a function that hides all main section elements, and then reveals just the #about section:
-  homeController.index = function() {
+  aboutController.index = function() {
     $('.swapped-body-content').hide();
-    $('.home').show();
+    $('.about').show();
   };
 
-  module.homeController = projectController;
+  module.aboutController = projectController;
 })(window);

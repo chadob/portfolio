@@ -8,6 +8,7 @@ $(function() {
   	window.y = e.pageY;
     mouseXPosition = Math.round(window.x / $('body').css('width').replace("px", "") * 100);
     mouseYPosition = Math.round(window.y / $('body').css('height').replace("px", "") * 100);
+console.log(mouseYPosition);
 		xRotate = mouseXPosition - 50;
 		yRotate = mouseYPosition - 50;
 		angle = Math.atan(yRotate/xRotate) / (Math.PI / 180);

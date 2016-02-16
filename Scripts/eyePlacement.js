@@ -13,6 +13,8 @@ var eyeRotation = function (mouseXPosition, mouseYPosition, angle) {
     }
   }
 }
+
+
 var eyePlacement = function(mouseXPosition, mouseYPosition) {
   $('.iris').css('left', 'calc(' + mouseXPosition + '% + ' + (-14 - 53/100 * mouseXPosition) + 'px)');
   $('.iris').css('top', 'calc((' + mouseYPosition + '%) - (' + mouseYPosition / 100 * $('.iris').css('height').replace('px', "") + 'px)');

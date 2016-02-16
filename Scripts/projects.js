@@ -6,6 +6,6 @@
     $('.swapped-body-content').hide();
     $('.projects').show();
   };
-
+  console.log("hi");
   module.projectController = projectController;
 })(window);

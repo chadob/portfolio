@@ -7,5 +7,5 @@
     $('.home').show();
   };
 
-  module.homeController = projectController;
+  module.homeController = homeController;
 })(window);

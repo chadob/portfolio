@@ -6,9 +6,9 @@
       this[property] = project[property];
     },this);
   }
-  Project.projectList = [];
   //code to create a method to check localStorage for json object and prepend it to the dom
   Project.fetchAll = function() {
+    Project.projectList = [];
     var dataList;
     if (localStorage.storageProjects) {
       dataList = JSON.parse(localStorage.storageProjects);

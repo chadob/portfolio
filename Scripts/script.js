@@ -33,13 +33,7 @@
     return template(this);
   };
 
-  //useless code to include reduce because I can't think of any reason why I would use it in this site
-  var arr = ['Hi, ', 'my ', 'name ', 'is ', 'Chad.'];
-  var str = '';
-  str = arr.reduce(function(a, b) {
-    return str + a + b;
-  });
-  console.log(str);
-
+  //run fetchAll()
+  Project.fetchAll();
   module.Project = Project;
 })(window);

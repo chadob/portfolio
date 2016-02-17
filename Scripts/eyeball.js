@@ -8,8 +8,8 @@ $(function() {
   	window.y = e.pageY;
     mouseXPosition = Math.round(window.x / $('body').css('width').replace("px", "") * 100);
     mouseYPosition = Math.round(window.y / $('body').css('height').replace("px", "") * 100);
-		xRotate = mouseXPosition - 50;
-		yRotate = mouseYPosition - 50;
+		xRotate = mouseXPosition - 50; //50 is eye x position
+		yRotate = mouseYPosition - 100; //0 is eye y position
 		angle = Math.atan(yRotate/xRotate) / (Math.PI / 180);
 		eyeRotation(mouseXPosition, mouseYPosition, angle);
 		eyeSize(xRotate, yRotate, angle, mouseXPosition, mouseYPosition, irisSize, pupilSize);

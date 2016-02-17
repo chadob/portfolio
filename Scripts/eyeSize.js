@@ -1,5 +1,5 @@
-var eyeSize = function (xRotate, yRotate, angle, mouseXPosition, mouseYPosition, irisSize, pupilSize ) {
-  if (Math.abs(50 - mouseXPosition) > Math.abs(50 - mouseYPosition)) {
+var eyeSize = function (xRotate, yRotate, angle, mouseXPosition, mouseYPosition, irisSize, pupilSize, eyeHeight ) {
+  if (Math.abs(50 - mouseXPosition) > Math.abs(100 - ((eyeHeight / 2) / $('body').css('height').replace("px", "")) - mouseYPosition)) {
     heightWidthSetter = mouseXPosition;
   } else {
     heightWidthSetter = mouseYPosition;

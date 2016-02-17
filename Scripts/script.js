@@ -34,10 +34,9 @@
   //get titles from github for projects, probably not going to include in final website build
   Project.getGithubInfoAndRunFetchAll = function() {
     $.ajax({
-       url: 'https://api.github.com/users/chadob/repos' +
+       url: '/github/users/chadob/repos' +
        '?er_page=4&sort=updated',
        type: 'GET',
-       headers: { 'Authorization': 'token ' + githubToken },
        success: function(data, message, xhr) {
          names.all.push(data[4].name);
          names.all.push(data[5].name);

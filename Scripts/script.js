@@ -15,22 +15,22 @@
       dataList = JSON.parse(localStorage.storageProjects);
       dataList[0].projectTitle = names.all[0];
       dataList[1].projectTitle = names.all[1];
-      Project.projectList = dataList.map(function(project) {
-        $('.projects').prepend(new Project(project).toHtml());
-      });
-
+      Project.prependProjects(dataList);
     } else {
       $.getJSON('Data/projectData.json', function(data) {
         localStorage.setItem('storageProjects', JSON.stringify(data));
         dataList = JSON.parse(localStorage.storageProjects);
         dataList[0].projectTitle = names.all[0];
         dataList[1].projectTitle = names.all[1];
-        Project.projectList = dataList.map(function(project) {
-          $('.projects').prepend(new Project(project).toHtml());
-        });
+        Project.prependProjects(dataList);
       });
     }
   };
+  Project.prependProjects(dataList) {
+    dataList.map(function(project) {
+      $('.projects').prepend(new Project(project).toHtml());
+    });
+  }
   //get titles from github for projects, probably not going to include in final website build
   Project.getGithubInfoAndRunFetchAll = function() {
     $.ajax({

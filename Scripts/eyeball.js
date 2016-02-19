@@ -7,7 +7,7 @@ $(function() {
     window.x = e.pageX;
   	window.y = e.pageY;
     mouseXPosition = Math.round(window.x / $(window).width() * 100);
-    mouseYPosition = Math.round(window.y / $(window).height * 100);
+    mouseYPosition = Math.round(window.y / $(window).height() * 100);
 		xRotate = mouseXPosition - eyeX; //50 is eye x position
 		yRotate = mouseYPosition - eyeY + ( (eyeHeight / 2) / $(window).height()); //0 is eye y position
 		angle = Math.atan(yRotate/xRotate) / (Math.PI / 180);

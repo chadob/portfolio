@@ -26,11 +26,11 @@
       });
     }
   };
-  Project.prependProjects(dataList) {
+  Project.prependProjects = function(dataList) {
     dataList.map(function(project) {
       $('.projects').prepend(new Project(project).toHtml());
     });
-  }
+  };
   //get titles from github for projects, probably not going to include in final website build
   Project.getGithubInfoAndRunFetchAll = function() {
     $.ajax({

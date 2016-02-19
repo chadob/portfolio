@@ -7,5 +7,5 @@
     var clickedSection = ctx.params.section;
     $('.' + clickedSection).show();
   };
-  module.sectionController = sectiontController;
+  module.sectionController = sectionController;
 })(window);

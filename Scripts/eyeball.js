@@ -6,10 +6,10 @@ $(function() {
 	$(document).mousemove(function(e) {
     window.x = e.pageX;
   	window.y = e.pageY;
-    mouseXPosition = Math.round(window.x / $(window).width().replace("px", "") * 100);
-    mouseYPosition = Math.round(window.y / $(window).height().replace("px", "") * 100);
+    mouseXPosition = Math.round(window.x / $(window).width() * 100);
+    mouseYPosition = Math.round(window.y / $(window).height * 100);
 		xRotate = mouseXPosition - eyeX; //50 is eye x position
-		yRotate = mouseYPosition - eyeY + ( (eyeHeight / 2) / $(window).height().replace("px", "")); //0 is eye y position
+		yRotate = mouseYPosition - eyeY + ( (eyeHeight / 2) / $(window).height()); //0 is eye y position
 		angle = Math.atan(yRotate/xRotate) / (Math.PI / 180);
 		eyeRotation(mouseXPosition, mouseYPosition, angle);
 		eyeSize(xRotate, yRotate, angle, mouseXPosition, mouseYPosition, irisSize, pupilSize, eyeHeight);
